@@ -10,7 +10,7 @@ const Blockmatic = styled.div`
   width: 100vw;
   align-items: center;
   font-size: 10em;
-  letter-spacing: .04em;
+  letter-spacing: .06em;
 `
 
 export default function App () : JSX.Element {
