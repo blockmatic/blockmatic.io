@@ -20,11 +20,11 @@ const Blockmatic = styled.div`
 const Slogan = styled.div`
   color: #rgb(106, 106, 106);;
   font-size: 2em;
-  padding-bottom: 4em;
+  padding-bottom: 4.5em;
 `
 
 const Social = styled.div`
-  font-size: calc(1vw + 2vh);
+  font-size: calc(1vw + 2.5vh);
   position: fixed;
   display: flex;
   direction: row;
