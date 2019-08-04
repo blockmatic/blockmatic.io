@@ -54,7 +54,7 @@ const SocialLink = styled.a`
 const charPoses = {
   enter: { 
     opacity: 1,
-    delay: ({ charIndex }:{charIndex:number}) => charIndex * 35
+    delay: ({ charIndex }:{charIndex:number}) => charIndex * 45
   },
   exit: { 
     opacity: 0
