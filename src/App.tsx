@@ -36,8 +36,8 @@ const Slogan = styled.div`
 `
 
 const Social = styled(posed.div({
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, delay: 5000 }
+  hidden: { opacity: 0, y: -500},
+  visible: { opacity: 1, y:0, delay: 5000 }
 }))`
   opacity: 0;
   font-size: calc(1vw + 2.5vh);
@@ -54,7 +54,7 @@ const SocialLink = styled.a`
 const charPoses = {
   enter: { 
     opacity: 1,
-    delay: ({ charIndex }:{charIndex:number}) => charIndex * 40
+    delay: ({ charIndex }:{charIndex:number}) => charIndex * 35
   },
   exit: { 
     opacity: 0
