@@ -7,7 +7,7 @@ import SplitText from 'react-pose-text'
 const LandingWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   align-items: center;
   justify-content: center;
 `
@@ -27,7 +27,7 @@ const Blockmatic = styled(posed.div({
   font-family: 'Dhurjati', Sans-Serif;
   font-size: 10em;
   letter-spacing: .06em;
-  transition: all 2s ease-in;
+  transition: opacity 2s ease-in;
 `
 
 const Slogan = styled.div`

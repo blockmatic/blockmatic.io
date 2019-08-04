@@ -6,7 +6,8 @@ html {
   font-family: arial;
 }
 
-body, html{
+body, html, #root{
   padding: 0;
   margin: 0;
+  height: 100%;
 }
