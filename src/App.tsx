@@ -46,7 +46,7 @@ export default function App () : JSX.Element {
         <SocialLink href='https://github.com/blockmatic' target='_blank'><FaGithubAlt /></SocialLink>
         <SocialLink href='https://medium.com/blockmatic' target='_blank'><FaMediumM /></SocialLink>
         <SocialLink href='https://twitter.com/blockmatic_io' target='_blank'><FaTwitter /></SocialLink>
-        <SocialLink href='mailto://hello@blockmatic.io' target='_blank'><FaEnvelope /></SocialLink>
+        <SocialLink href='mailto:hello@blockmatic.io' target='_blank'><FaEnvelope /></SocialLink>
       </Social>
     </LandingWrapper> 
   );
