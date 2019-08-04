@@ -36,7 +36,7 @@ const Slogan = styled.div`
 `
 
 const Social = styled(posed.div({
-  hidden: { opacity: 0, y: -500},
+  hidden: { opacity: 0, y: -1000},
   visible: { opacity: 1, y:0, delay: 5000 }
 }))`
   opacity: 0;
@@ -44,7 +44,7 @@ const Social = styled(posed.div({
   display: flex;
   direction: row;
   justify-content: center;
-  transition: opacity .3s ease-in;
+  transition: opacity 1s ease-in;
 `
 const SocialLink = styled.a`
   color: #353535;
@@ -54,7 +54,7 @@ const SocialLink = styled.a`
 const charPoses = {
   enter: { 
     opacity: 1,
-    delay: ({ charIndex }:{charIndex:number}) => charIndex * 45
+    delay: ({ charIndex }:{charIndex:number}) => charIndex * 57
   },
   exit: { 
     opacity: 0
@@ -67,7 +67,7 @@ export default function App () : JSX.Element {
   
   useEffect(() => setVisible(true),[setVisible])
   useEffect(() => {
-    const sloganTimeout = setTimeout(() => setSloganVisible(true), 3000)
+    const sloganTimeout = setTimeout(() => setSloganVisible(true), 3700)
     return () => clearTimeout(sloganTimeout)
   },[setSloganVisible])
 
