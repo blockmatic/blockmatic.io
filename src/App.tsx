@@ -9,6 +9,13 @@ const LandingWrapper = styled.div`
   align-items: center;
   justify-content: center;
 `
+const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+`
 
 const Blockmatic = styled.div`
   color: #353535;
@@ -19,17 +26,14 @@ const Blockmatic = styled.div`
 
 const Slogan = styled.div`
   color: #rgb(106, 106, 106);;
-  font-size: 2em;
-  padding-bottom: 4.5em;
+  font-size: calc(1vw + 2.5vh);;
 `
 
 const Social = styled.div`
   font-size: calc(1vw + 2.5vh);
-  position: fixed;
   display: flex;
   direction: row;
   justify-content: center;
-  bottom: 0;
 `
 const SocialLink = styled.a`
   color: #353535;
@@ -40,8 +44,10 @@ const SocialLink = styled.a`
 export default function App () : JSX.Element {
   return (
     <LandingWrapper>
-      <Blockmatic>blockmatic</Blockmatic>
-      <Slogan>build on EOSIO</Slogan>
+      <Main>
+        <Blockmatic>blockmatic</Blockmatic>
+        <Slogan>build on EOSIO</Slogan>
+      </Main>
       <Social>
         <SocialLink href='https://github.com/blockmatic' target='_blank'><FaGithubAlt /></SocialLink>
         <SocialLink href='https://medium.com/blockmatic' target='_blank'><FaMediumM /></SocialLink>
