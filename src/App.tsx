@@ -36,15 +36,14 @@ const Slogan = styled.div`
 `
 
 const Social = styled(posed.div({
-  hidden: { opacity: 0, y: -1000},
-  visible: { opacity: 1, y:0, delay: 5000 }
+  hidden: {  y: 100},
+  visible: { y:0, delay: 6000 }
 }))`
-  opacity: 0;
   font-size: calc(1vw + 2.5vh);
   display: flex;
   direction: row;
   justify-content: center;
-  transition: opacity 1s ease-in;
+  transition: opacity 2s ease-in;
 `
 const SocialLink = styled.a`
   color: #353535;
