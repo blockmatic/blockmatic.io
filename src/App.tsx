@@ -76,7 +76,7 @@ export default function App () : JSX.Element {
         <Blockmatic pose={visible? 'visible': 'hidden'}>blockmatic</Blockmatic>
         <Slogan>
           <SplitText charPoses={charPoses} pose={sloganVisible ? 'enter' : 'exit'}>
-            build on EOSIO
+            blockchain & crypto
           </SplitText>
         </Slogan>
       </Main>
