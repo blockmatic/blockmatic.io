@@ -10,6 +10,7 @@ const LandingWrapper = styled.div`
   height: 100%;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `
 const Main = styled.div`
   display: flex;
@@ -36,14 +37,14 @@ const Slogan = styled.div`
 `
 
 const Social = styled(posed.div({
-  hidden: {  y: 100},
+  hidden: {  y: 100 },
   visible: { y:0, delay: 6000 }
 }))`
   font-size: calc(1vw + 2.5vh);
   display: flex;
   direction: row;
   justify-content: center;
-  transition: opacity 2s ease-in;
+  transition: all 1s ease-in;
 `
 const SocialLink = styled.a`
   color: #353535;
