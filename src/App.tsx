@@ -21,14 +21,14 @@ const Main = styled.div`
 `
 
 const Blockmatic = styled(posed.div({
-  hidden: { opacity: 0},
-  visible: { opacity: 1},
+  hidden: {opacity:0},
+  visible: { opacity: 1, transition: { duration: 3000 }}
 }))`
   color: #353535;
   font-family: 'Dhurjati', Sans-Serif;
   font-size: 10em;
   letter-spacing: .06em;
-  transition: opacity 2s ease-in;
+  opacity: 0;
 `
 
 const Slogan = styled.div`
@@ -38,7 +38,7 @@ const Slogan = styled.div`
 
 const Social = styled(posed.div({
   hidden: {  y: 100 },
-  visible: { y:0, delay: 6000 }
+  visible: { y:0, delay: 5000 }
 }))`
   font-size: calc(1vw + 2.5vh);
   display: flex;
@@ -52,36 +52,34 @@ const SocialLink = styled.a`
 `
 
 const charPoses = {
-  enter: { 
+  visible: { 
     opacity: 1,
     delay: ({ charIndex }:{charIndex:number}) => charIndex * 57
   },
-  exit: { 
+  hidden: { 
     opacity: 0
   }
 };
 
 export default function App () : JSX.Element {
-  const [visible, setVisible] = useState<boolean>(false)
   const [sloganVisible, setSloganVisible] = useState<boolean>(false)
   
-  useEffect(() => setVisible(true),[])
   useEffect(() => {
-    const sloganTimeout = setTimeout(() => setSloganVisible(true), 3700)
+    const sloganTimeout = setTimeout(() => setSloganVisible(true), 3500)
     return () => clearTimeout(sloganTimeout)
   },[])
 
   return (
     <LandingWrapper>
       <Main>
-        <Blockmatic pose={visible? 'visible': 'hidden'}>blockmatic</Blockmatic>
+        <Blockmatic initialPose="hidden" pose="visible">blockmatic</Blockmatic>
         <Slogan>
-          <SplitText charPoses={charPoses} pose={sloganVisible ? 'enter' : 'exit'}>
+          <SplitText charPoses={charPoses} pose={sloganVisible ? 'visible' : 'hidden'}>
             blockchain & crypto
           </SplitText>
         </Slogan>
       </Main>
-      <Social pose={visible? 'visible': 'hidden'}>
+      <Social initialPose="hidden" pose="visible">
         <SocialLink href='https://github.com/blockmatic' target='_blank'><FaGithubAlt /></SocialLink>
         <SocialLink href='https://medium.com/blockmatic' target='_blank'><FaMediumM /></SocialLink>
         <SocialLink href='https://twitter.com/blockmatic_io' target='_blank'><FaTwitter /></SocialLink>
