@@ -65,11 +65,11 @@ export default function App () : JSX.Element {
   const [visible, setVisible] = useState<boolean>(false)
   const [sloganVisible, setSloganVisible] = useState<boolean>(false)
   
-  useEffect(() => setVisible(true),[setVisible])
+  useEffect(() => setVisible(true),[])
   useEffect(() => {
     const sloganTimeout = setTimeout(() => setSloganVisible(true), 3700)
     return () => clearTimeout(sloganTimeout)
-  },[setSloganVisible])
+  },[])
 
   return (
     <LandingWrapper>
