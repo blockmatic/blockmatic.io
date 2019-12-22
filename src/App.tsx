@@ -34,7 +34,7 @@ const Blockmatic = styled(
 `
 
 const Slogan = styled.div`
-  color: #rgb(106, 106, 106);
+  color: rgb(106, 106, 106);
   font-size: calc(1vw + 2.5vh);
 `
 
