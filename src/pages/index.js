@@ -48,10 +48,10 @@ const Social = styled(
   }),
 )`
   font-size: calc(1vw + 2.5vh);
-  display: flex;
   direction: row;
   justify-content: center;
   transition: all 1s ease-in;
+  margin-bottom: 20px;
 `
 const SocialLink = styled.a`
   color: #353535;
@@ -84,6 +84,7 @@ export default function App() {
         </Blockmatic>
         <Slogan>
           <SplitText
+            initialPose='hidden'
             charPoses={charPoses}
             pose={sloganVisible ? 'visible' : 'hidden'}
           >

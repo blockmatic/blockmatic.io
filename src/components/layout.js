@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 
-import Header from "./header"
 import "./layout.css"
 
 const Content = styled.div`
