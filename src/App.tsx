@@ -23,7 +23,7 @@ const Main = styled.div`
 const Blockmatic = styled(
   posed.div({
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 3000 } },
+    visible: { opacity: 1, transition: { duration: 3000 }, delay: 1500 },
   }),
 )`
   color: #353535;
@@ -84,22 +84,22 @@ export default function App(): JSX.Element {
             charPoses={charPoses}
             pose={sloganVisible ? 'visible' : 'hidden'}
           >
-            blockchain & crypto
+            blockchain & crypto assets
           </SplitText>
         </Slogan>
       </Main>
       <Social initialPose="hidden" pose="visible">
-        <SocialLink href="https://github.com/blockmatic" target="_blank">
-          <FaGithubAlt />
-        </SocialLink>
         <SocialLink href="https://medium.com/blockmatic" target="_blank">
           <FaMediumM />
+        </SocialLink>
+        <SocialLink href="mailto:hello@blockmatic.io" target="_blank">
+          <FaEnvelope />
         </SocialLink>
         <SocialLink href="https://twitter.com/blockmatic_io" target="_blank">
           <FaTwitter />
         </SocialLink>
-        <SocialLink href="mailto:hello@blockmatic.io" target="_blank">
-          <FaEnvelope />
+        <SocialLink href="https://github.com/blockmatic" target="_blank">
+          <FaGithubAlt />
         </SocialLink>
       </Social>
     </LandingWrapper>

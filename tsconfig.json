@@ -2,8 +2,11 @@
   "extends": "./node_modules/@blockmatic/tsconfig/tsconfig.app.json",
   "compilerOptions": {
     "baseUrl": "./src",
-    "rootDirs": ["./src"],
-    "jsx": "react"
+    "rootDirs": [
+      "./src"
+    ]
   },
-  "include": ["./src"]
+  "include": [
+    "./src"
+  ]
 }
