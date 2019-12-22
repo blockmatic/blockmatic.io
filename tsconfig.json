@@ -1,25 +1,8 @@
 {
+  "extends": "./node_modules/@blockmatic/tsconfig/tsconfig.app.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve"
+    "baseUrl": "./src",
+    "rootDirs": ["./src"]
   },
-  "include": [
-    "src"
-  ]
+  "include": ["./src"]
 }

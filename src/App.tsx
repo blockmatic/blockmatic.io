@@ -1,7 +1,7 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import { FaGithubAlt, FaMediumM, FaTwitter, FaEnvelope } from 'react-icons/fa'
-import posed  from 'react-pose'
+import posed from 'react-pose'
 import SplitText from 'react-pose-text'
 
 const LandingWrapper = styled.div`
@@ -20,26 +20,30 @@ const Main = styled.div`
   justify-content: center;
 `
 
-const Blockmatic = styled(posed.div({
-  hidden: {opacity:0},
-  visible: { opacity: 1, transition: { duration: 3000 }}
-}))`
+const Blockmatic = styled(
+  posed.div({
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 3000 } },
+  }),
+)`
   color: #353535;
   font-family: 'Dhurjati', Sans-Serif;
   font-size: 10em;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   opacity: 0;
 `
 
 const Slogan = styled.div`
-  color: #rgb(106, 106, 106);;
-  font-size: calc(1vw + 2.5vh);;
+  color: #rgb(106, 106, 106);
+  font-size: calc(1vw + 2.5vh);
 `
 
-const Social = styled(posed.div({
-  hidden: {  y: 100 },
-  visible: { y:0, delay: 5000 }
-}))`
+const Social = styled(
+  posed.div({
+    hidden: { y: 100 },
+    visible: { y: 0, delay: 5000 },
+  }),
+)`
   font-size: calc(1vw + 2.5vh);
   display: flex;
   direction: row;
@@ -52,39 +56,52 @@ const SocialLink = styled.a`
 `
 
 const charPoses = {
-  visible: { 
+  visible: {
     opacity: 1,
-    delay: ({ charIndex }:{charIndex:number}) => charIndex * 57
+    delay: ({ charIndex }: { charIndex: number }) => charIndex * 57,
   },
-  hidden: { 
-    opacity: 0
-  }
-};
+  hidden: {
+    opacity: 0,
+  },
+}
 
-export default function App () : JSX.Element {
+export default function App(): JSX.Element {
   const [sloganVisible, setSloganVisible] = useState<boolean>(false)
-  
+
   useEffect(() => {
     const sloganTimeout = setTimeout(() => setSloganVisible(true), 3500)
     return () => clearTimeout(sloganTimeout)
-  },[])
+  }, [])
 
   return (
     <LandingWrapper>
       <Main>
-        <Blockmatic initialPose="hidden" pose="visible">blockmatic</Blockmatic>
+        <Blockmatic initialPose="hidden" pose="visible">
+          blockmatic
+        </Blockmatic>
         <Slogan>
-          <SplitText charPoses={charPoses} pose={sloganVisible ? 'visible' : 'hidden'}>
+          <SplitText
+            charPoses={charPoses}
+            pose={sloganVisible ? 'visible' : 'hidden'}
+          >
             blockchain & crypto
           </SplitText>
         </Slogan>
       </Main>
       <Social initialPose="hidden" pose="visible">
-        <SocialLink href='https://github.com/blockmatic' target='_blank'><FaGithubAlt /></SocialLink>
-        <SocialLink href='https://medium.com/blockmatic' target='_blank'><FaMediumM /></SocialLink>
-        <SocialLink href='https://twitter.com/blockmatic_io' target='_blank'><FaTwitter /></SocialLink>
-        <SocialLink href='mailto:hello@blockmatic.io' target='_blank'><FaEnvelope /></SocialLink>
+        <SocialLink href="https://github.com/blockmatic" target="_blank">
+          <FaGithubAlt />
+        </SocialLink>
+        <SocialLink href="https://medium.com/blockmatic" target="_blank">
+          <FaMediumM />
+        </SocialLink>
+        <SocialLink href="https://twitter.com/blockmatic_io" target="_blank">
+          <FaTwitter />
+        </SocialLink>
+        <SocialLink href="mailto:hello@blockmatic.io" target="_blank">
+          <FaEnvelope />
+        </SocialLink>
       </Social>
-    </LandingWrapper> 
-  );
+    </LandingWrapper>
+  )
 }
