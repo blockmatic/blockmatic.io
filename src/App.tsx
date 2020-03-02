@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
-import { FaGithubAlt, FaMediumM, FaTwitter, FaEnvelope } from 'react-icons/fa'
+import { FaGithubAlt, FaTwitter, FaEnvelope } from 'react-icons/fa'
 import posed from 'react-pose'
 import SplitText from 'react-pose-text'
 
@@ -23,7 +23,7 @@ const Main = styled.div`
 const Blockmatic = styled(
   posed.div({
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 3000 }, delay: 1500 },
+    visible: { opacity: 1, transition: { duration: 3000 }, delay: 500 },
   }),
 )`
   color: #353535;
