@@ -84,7 +84,7 @@ export default function App(): JSX.Element {
             charPoses={charPoses}
             pose={sloganVisible ? 'visible' : 'hidden'}
           >
-            blockchain & crypto assets
+            blockchain and digital assets
           </SplitText>
         </Slogan>
       </Main>
