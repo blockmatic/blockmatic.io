@@ -81,11 +81,11 @@ export default function App(): JSX.Element {
 
   return (
     <>
-      <video src="/video/bg.mp4" autoPlay loop playsinline muted />
+      <video src='/video/bg.mp4' autoPlay loop playsInline muted />
 
       <LandingWrapper>
         <Main>
-          <Blockmatic initialPose="hidden" pose="visible">
+          <Blockmatic initialPose='hidden' pose='visible'>
             blockmatic
           </Blockmatic>
           <Slogan>
@@ -97,14 +97,14 @@ export default function App(): JSX.Element {
             </SplitText>
           </Slogan>
         </Main>
-        <Social initialPose="hidden" pose="visible">
-          <SocialLink href="mailto:hello@blockmatic.io" target="_blank">
+        <Social initialPose='hidden' pose='visible'>
+          <SocialLink href='mailto:hello@blockmatic.io' target='_blank'>
             <FaEnvelope />
           </SocialLink>
-          <SocialLink href="https://twitter.com/blockmatic_io" target="_blank">
+          <SocialLink href='https://twitter.com/blockmatic_io' target='_blank'>
             <FaTwitter />
           </SocialLink>
-          <SocialLink href="https://github.com/blockmatic" target="_blank">
+          <SocialLink href='https://github.com/blockmatic' target='_blank'>
             <FaGithubAlt />
           </SocialLink>
         </Social>
