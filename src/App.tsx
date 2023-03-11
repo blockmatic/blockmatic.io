@@ -81,13 +81,7 @@ export default function App(): JSX.Element {
 
   return (
     <>
-      <video
-        src="https://dsqqu7oxq6o1v.cloudfront.net/motion-array-1345806-V1-0002_A014_11241804_C478-high.mp4"
-        autoPlay
-        loop
-        playsinline
-        muted
-      />
+      <video src="/video/bg.mp4" autoPlay loop playsinline muted />
 
       <LandingWrapper>
         <Main>
