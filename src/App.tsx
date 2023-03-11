@@ -7,10 +7,16 @@ import SplitText from 'react-pose-text'
 const LandingWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
 `
 const Main = styled.div`
   display: flex;
@@ -26,7 +32,7 @@ const Blockmatic = styled(
     visible: { opacity: 1, transition: { duration: 3000 }, delay: 500 },
   }),
 )`
-  color: #353535;
+  color: white;
   font-family: 'Dhurjati', Sans-Serif;
   font-size: 10em;
   letter-spacing: 0.06em;
@@ -34,14 +40,14 @@ const Blockmatic = styled(
 `
 
 const Slogan = styled.div`
-  color: rgb(106, 106, 106);
+  color: white;
   font-size: calc(1vw + 2.5vh);
 `
 
 const Social = styled(
   posed.div({
-    hidden: { y: 100 },
-    visible: { y: 0, delay: 5000 },
+    hidden: { y: 200 },
+    visible: { y: -20, delay: 5000 },
   }),
 )`
   font-size: calc(1vw + 2.5vh);
@@ -51,7 +57,7 @@ const Social = styled(
   transition: all 1s ease-in;
 `
 const SocialLink = styled.a`
-  color: #353535;
+  color: white;
   padding: 1em;
 `
 
@@ -74,31 +80,41 @@ export default function App(): JSX.Element {
   }, [])
 
   return (
-    <LandingWrapper>
-      <Main>
-        <Blockmatic initialPose="hidden" pose="visible">
-          blockmatic
-        </Blockmatic>
-        <Slogan>
-          <SplitText
-            charPoses={charPoses}
-            pose={sloganVisible ? 'visible' : 'hidden'}
-          >
-            blockchain and digital assets
-          </SplitText>
-        </Slogan>
-      </Main>
-      <Social initialPose="hidden" pose="visible">
-        <SocialLink href="mailto:hello@blockmatic.io" target="_blank">
-          <FaEnvelope />
-        </SocialLink>
-        <SocialLink href="https://twitter.com/blockmatic_io" target="_blank">
-          <FaTwitter />
-        </SocialLink>
-        <SocialLink href="https://github.com/blockmatic" target="_blank">
-          <FaGithubAlt />
-        </SocialLink>
-      </Social>
-    </LandingWrapper>
+    <>
+      <video
+        src="https://dsqqu7oxq6o1v.cloudfront.net/motion-array-1345806-V1-0002_A014_11241804_C478-high.mp4"
+        autoPlay
+        loop
+        playsinline
+        muted
+      />
+
+      <LandingWrapper>
+        <Main>
+          <Blockmatic initialPose="hidden" pose="visible">
+            blockmatic
+          </Blockmatic>
+          <Slogan>
+            <SplitText
+              charPoses={charPoses}
+              pose={sloganVisible ? 'visible' : 'hidden'}
+            >
+              blockchain and digital assets
+            </SplitText>
+          </Slogan>
+        </Main>
+        <Social initialPose="hidden" pose="visible">
+          <SocialLink href="mailto:hello@blockmatic.io" target="_blank">
+            <FaEnvelope />
+          </SocialLink>
+          <SocialLink href="https://twitter.com/blockmatic_io" target="_blank">
+            <FaTwitter />
+          </SocialLink>
+          <SocialLink href="https://github.com/blockmatic" target="_blank">
+            <FaGithubAlt />
+          </SocialLink>
+        </Social>
+      </LandingWrapper>
+    </>
   )
 }
