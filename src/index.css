@@ -1,13 +1,24 @@
 @import-normalize;
 
 html {
-  background: #f1f1f1;
-  font-size: calc(.4vh + 1.1vw);
+  font-size: calc(0.4vh + 1.1vw);
   font-family: arial;
 }
 
-body, html, #root{
+body,
+html,
+#root {
   padding: 0;
   margin: 0;
   height: 100%;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
