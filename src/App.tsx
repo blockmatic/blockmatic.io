@@ -89,11 +89,18 @@ export default function App(): JSX.Element {
             blockmatic
           </Blockmatic>
           <Slogan>
-            <SplitText
+            {/* <SplitText
               charPoses={charPoses}
               pose={sloganVisible ? 'visible' : 'hidden'}
             >
               blockchain and digital assets
+            </SplitText>
+             */}
+            <SplitText
+              charPoses={charPoses}
+              pose={sloganVisible ? 'visible' : 'hidden'}
+            >
+              work with the experts
             </SplitText>
           </Slogan>
         </Main>
