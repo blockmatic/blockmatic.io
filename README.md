@@ -12,11 +12,11 @@ MIT © [Blockmatic](http://blockmatic.io)
 
 ---
 
-## Blockmatic
+## Blockmatic Labs
 
-Blockmatic is building a robust ecosystem of people and tools for the development of blockchain applications.
+Blockmatic Labs is at the forefront of innovation in blockchain, cryptocurrency, and artificial intelligence. We design and develop cutting-edge solutions that shape the decentralized, intelligent future. 
 
-[blockmatic.io](https://blockmatic.io)  
+[blockmatic.io](https://blockmatic.io)
 
 <!-- Please don't remove this: Grab your social icons from https://github.com/carlsednaoui/gitsocial -->
 
