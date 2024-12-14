@@ -3,6 +3,14 @@
 import React, { useState, useEffect } from 'react'
 import { FaGithubAlt, FaTwitter, FaEnvelope } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+	subsets: ["latin"], 
+	weight: ["400", "500", "600", "700"],
+	variable: "--font-poppins",
+});
+
 
 const charPoses = {
   hidden: { opacity: 0 },
@@ -20,14 +28,14 @@ export function AnimatedText() {
     return () => clearTimeout(sloganTimeout)
   }, [])
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center overflow-hidden z-0">
+    <div className="fixed inset-0 flex flex-col items-center justify-center overflow-hidden z-0 ">
       <main className="flex flex-col h-full items-center justify-center">
-        <div className="text-center min-h-[220px]">
+        <div className="text-center min-h-[220px] mt-32">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 3, delay: 0.5 }}
-          className="text-white font-['Dhurjati',_sans-serif] text-9xl tracking-wider opacity-0"
+          className={`text-white text-9xl tracking-normal opacity-0 ${poppins.className} `}
         >
           blockmatic
         </motion.div>
@@ -40,7 +48,7 @@ export function AnimatedText() {
                 visible: { transition: { staggerChildren: 0.057 } },
               }}
             >
-              {'blockchain, crypto, and ai'.split('').map((char, index) => (
+              {'cutting-edge crypto and ai solutions'.split('').map((char, index) => (
            
                 <motion.span
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>

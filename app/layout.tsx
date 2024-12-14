@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
-import { Manrope } from "next/font/google";
+import { Nunito } from "next/font/google";
 
-const manrope = Manrope({
+const nunito = Nunito({
 	subsets: ["latin"],
-	variable: "--font-manrope",
+	variable: "--font-nunito",
 });
 
 export const metadata: Metadata = {
 	title: "Blockmatic Labs",
 	description:
-		"Blockmatic Labs: Innovating in blockchain, crypto, and AI. We build cutting-edge solutions for a decentralized, intelligent future.",
+		"We build cutting-edge solutions with crypto and AI",
 };
 
 export default function RootLayout({
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${manrope.variable}`}>{children}</body>
+			<body className={`${nunito.variable}`}>{children}</body>
 		</html>
 	);
 }
