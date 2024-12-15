@@ -48,7 +48,7 @@ export function AnimatedText() {
                 visible: { transition: { staggerChildren: 0.057 } },
               }}
             >
-              {'cutting-edge crypto and ai solutions'.split('').map((char, index) => (
+              {'engineering the future'.split('').map((char, index) => (
            
                 <motion.span
                 // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
