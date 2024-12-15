@@ -30,7 +30,7 @@ export function AnimatedText() {
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center overflow-hidden z-0 ">
       <main className="flex flex-col h-full items-center justify-center">
-        <div className="text-center min-h-[220px] mt-32">
+        <div className="text-center min-h-[220px] mt-20">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
