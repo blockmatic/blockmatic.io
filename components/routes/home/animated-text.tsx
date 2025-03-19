@@ -76,7 +76,7 @@ export function AnimatedText() {
           href="mailto:contact@gaboesquivel.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white p-4"
+          className="text-white p-4 cursor-pointer"
         >
           <FaEnvelope />
         </a>
@@ -84,7 +84,7 @@ export function AnimatedText() {
           href="https://twitter.com/blockmatic_io"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white p-4"
+          className="text-white p-4 cursor-pointer"
         >
           <FaTwitter />
         </a>
@@ -92,7 +92,7 @@ export function AnimatedText() {
           href="https://github.com/blockmatic"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white p-4"
+          className="text-white p-4 cursor-pointer"
         >
           <FaGithubAlt />
         </a>
