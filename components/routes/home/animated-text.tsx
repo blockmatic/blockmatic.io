@@ -35,7 +35,7 @@ export function AnimatedText() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 3, delay: 0.5 }}
-          className={`text-white text-9xl tracking-normal opacity-0 ${poppins.className} `}
+          className={`text-white text-9xl tracking-normal opacity-0 ${poppins.className} bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-400 drop-shadow-[0_0_15px_rgba(99,102,241,0.3)]`}
         >
           blockmatic
         </motion.div>
