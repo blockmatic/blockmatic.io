@@ -47,6 +47,7 @@ export function AnimatedText() {
               variants={{
                 visible: { transition: { staggerChildren: 0.057 } },
               }}
+              className="tracking-wider"
             >
               {'Engineering the Future with Crypto & AI'.split('').map((char, index) => (
            
