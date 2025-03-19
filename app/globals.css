@@ -43,4 +43,8 @@
     height: 100%;
     font-family: var(--font-manrope);
   }
+  
+  a{
+    cursor: pointer !important;
+  }
 }

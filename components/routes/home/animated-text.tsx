@@ -70,31 +70,34 @@ export function AnimatedText() {
         initial={{ y: 200 }}
         animate={{ y: -20 }}
         transition={{ delay: 5 }}
-        className="text-[calc(1vw+2.5vh)] flex flex-row justify-center transition-all duration-1000 ease-in"
+        className="text-[calc(1vw+2.5vh)] flex flex-row justify-center gap-6 transition-all duration-1000 ease-in relative z-50"
       >
         <a
           href="mailto:contact@gaboesquivel.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white p-4 cursor-pointer"
+          className="text-white p-4 hover:text-emerald-300 transition-colors duration-300 cursor-pointer relative z-50"
+          style={{ cursor: 'pointer', pointerEvents: 'auto' }}
         >
-          <FaEnvelope />
+          <FaEnvelope className="cursor-pointer" />
         </a>
         <a
           href="https://twitter.com/blockmatic_io"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white p-4 cursor-pointer"
+          className="text-white p-4 hover:text-emerald-300 transition-colors duration-300 cursor-pointer relative z-50"
+          style={{ cursor: 'pointer', pointerEvents: 'auto' }}
         >
-          <FaTwitter />
+          <FaTwitter className="cursor-pointer" />
         </a>
         <a
           href="https://github.com/blockmatic"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white p-4 cursor-pointer"
+          className="text-white p-4 hover:text-emerald-300 transition-colors duration-300 cursor-pointer relative z-50"
+          style={{ cursor: 'pointer', pointerEvents: 'auto' }}
         >
-          <FaGithubAlt />
+          <FaGithubAlt className="cursor-pointer" />
         </a>
       </motion.div>
     </div>
